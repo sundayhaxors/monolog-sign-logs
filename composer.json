@@ -49,5 +49,8 @@
     "psr-4": {
       "Sundayhaxors\\Monolog\\SignLogs\\Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
   }
 }
