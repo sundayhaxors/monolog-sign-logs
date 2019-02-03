@@ -10,12 +10,33 @@ class SignLogsProcessorTest extends TestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testThrowsExceptionOnInvalidCall()
+    public function testThrowsExceptionOnEmptyKeyAndAlgo()
     {
         new SignLogsProcessor('', '');
-        new SignLogsProcessor('', 'none');
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testThrowsExceptionOnEmptyKeyAndInvalidAlgo()
+    {
+        new SignLogsProcessor('', 'invalidAlgo');
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testThrowsExceptionOnEmptyAlgo()
+    {
         new SignLogsProcessor('foobar', '');
     }
 
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testThrowsExceptionOnEmptyKeyButValidAlgo()
+    {
+        new SignLogsProcessor('', 'md5');
+    }
 
 }
