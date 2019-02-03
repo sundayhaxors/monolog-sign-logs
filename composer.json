@@ -42,12 +42,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Sundayhaxors\\Monolog\\SignLogs\\": "src/"
+      "SundayHaxors\\Monolog\\SignLogs\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Sundayhaxors\\Monolog\\SignLogs\\Tests\\": "tests/"
+      "SundayHaxors\\Monolog\\SignLogs\\Tests\\": "tests/"
     }
   },
   "scripts": {
