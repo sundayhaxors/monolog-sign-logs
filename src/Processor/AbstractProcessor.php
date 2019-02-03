@@ -6,7 +6,7 @@
  * Time: 21:20
  */
 
-namespace Sundayhaxors\MonologSignLogs\Processor;
+namespace Sundayhaxors\Monolog\SignLogs\Processor;
 
 
 class AbstractProcessor
