@@ -22,7 +22,7 @@ class SignLogsProcessorTest extends TestCase
      */
     public function testThrowsExceptionOnEmptyKeyAndInvalidAlgo()
     {
-        new SignLogsProcessor('', 'invalidAlgo');
+        new SignLogsProcessor('key', 'invalidAlgo');
     }
 
     /**
