@@ -10,9 +10,11 @@ class SignLogsProcessorTest extends TestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testThrowsExceptionOnEmptyKey()
+    public function testThrowsExceptionOnInvalidCall()
     {
-        new SignLogsProcessor('');
+        new SignLogsProcessor('', '');
+        new SignLogsProcessor('', 'none');
+        new SignLogsProcessor('foobar', '');
     }
 
 
