@@ -6,7 +6,7 @@
  * Time: 21:20
  */
 
-namespace Sundayhaxors\Monolog\SignLogs\Processor;
+namespace SundayHaxors\Monolog\SignLogs\Processor;
 
 use Monolog\Processor\ProcessorInterface;
 
