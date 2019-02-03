@@ -20,8 +20,7 @@ use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 $log = new Logger('logger');
 $log->pushHandler(new StreamHandler('path/to/log', Logger::WARNING));
 
-$processor = new SignLogsProcessor();
-$processor->setPSK('YOUR-PRE-SHARED-KEY');
+$processor = new SignLogsProcessor('YOUR-SECRET-KEY');
 $log->pushProcessor($processor);
 
 $log->log(Logger::DEBUG, 'This is a log message');
