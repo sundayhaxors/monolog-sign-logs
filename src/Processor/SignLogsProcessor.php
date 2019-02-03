@@ -9,7 +9,7 @@
 namespace Sundayhaxors\Monolog\SignLogs\Processor;
 
 
-class AbstractProcessor
+class SignLogsProcessor
 {
     
 }
