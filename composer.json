@@ -1,6 +1,7 @@
 {
   "name": "sundayhaxors/monolog-sign-logs",
   "description": "A Monolog Processor which signs log-entries with a private hash to prevent log manipulation",
+  "version": "0.0.1",
   "keywords": [
     "log",
     "logger",
@@ -10,13 +11,30 @@
     "manipulation"
   ],
   "homepage": "https://github.com/sundayhaxors/monolog-sign-logs",
-  "authors": {
-
-  },
+  "authors": [
+    {
+      "name": "Florian Engelhardt",
+      "role": "Developer"
+    },
+    {
+      "name": "Frank Berger",
+      "role": "Developer"
+    }
+  ],
   "type": "library",
   "license": "lgpl",
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "vendor-dir": ".Build/vendor",
+    "platform": {
+      "php": "7.2"
+    }
+  },
   "require": {
-    "monolog/monolog": "^1.17"
+    "php": "~7.2",
+    "monolog/monolog": "^1.0.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8"
