@@ -10,6 +10,11 @@ namespace SundayHaxors\Monolog\SignLogs\Processor;
 
 use Monolog\Processor\ProcessorInterface;
 
+/**
+ * Class SignLogsProcessor
+ *
+ * @package SundayHaxors\Monolog\SignLogs\Processor
+ */
 class SignLogsProcessor implements ProcessorInterface
 {
     
@@ -19,7 +24,7 @@ class SignLogsProcessor implements ProcessorInterface
     protected $key;
     
     /**
-     * @var
+     * @var selected $algorithm
      */
     protected $algorithm;
     
