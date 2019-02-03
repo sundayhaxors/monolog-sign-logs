@@ -7,6 +7,8 @@ use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 class SignLogsProcessorTest extends TestCase
 {
 
+    use \Spatie\Snapshots\MatchesSnapshots;
+
     /**
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
      * @expectedException \InvalidArgumentException
@@ -60,6 +62,21 @@ class SignLogsProcessorTest extends TestCase
         $signProcessor = new SignLogsProcessor('key', 'md5');
         $signedRecord = $signProcessor($record);
         $this->assertArrayHasKey('signature', $signedRecord['extra']);
+        $this->assertMatchesSnapshot($signedRecord);
+
+        $record = [
+            'message' => '',
+            'level' => 200,
+            'level_name' => 'INFO',
+            'channel' => 'app',
+            'datetime' => new \DateTimeImmutable('2018-06-11 18:39:26'),
+            'context' => [],
+            'extra' => []
+        ];
+        $signProcessor = new SignLogsProcessor('key', 'sha256');
+        $signedRecord = $signProcessor($record);
+        $this->assertArrayHasKey('signature', $signedRecord['extra']);
+        $this->assertMatchesSnapshot($signedRecord);
     }
 
 }

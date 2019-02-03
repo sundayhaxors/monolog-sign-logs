@@ -1,0 +1,8 @@
+message: ''
+level: 200
+level_name: INFO
+channel: app
+datetime: 2018-06-11T18:39:26+00:00
+context: {  }
+extra:
+    signature: 4c7691080f571e4a98cb1a61e40ce95c
