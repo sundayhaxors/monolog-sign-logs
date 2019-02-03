@@ -1,0 +1,34 @@
+{
+  "name": "sundayhaxors/monolog-sign-logs",
+  "description": "A Monolog Processor which signs log-entries with a private hash to prevent log manipulation",
+  "keywords": [
+    "log",
+    "logger",
+    "monolog",
+    "processor",
+    "sign",
+    "manipulation"
+  ],
+  "homepage": "https://github.com/sundayhaxors/monolog-sign-logs",
+  "authors": {
+
+  },
+  "type": "library",
+  "license": "lgpl",
+  "require": {
+    "monolog/monolog": "^1.17"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sundayhaxors\\Monolog\\SignLogs\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sundayhaxors\\Monolog\\SignLogs\\Tests\\": "tests/"
+    }
+  }
+}
