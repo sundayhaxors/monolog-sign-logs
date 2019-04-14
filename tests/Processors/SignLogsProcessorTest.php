@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);
 
+namespace SundayHaxors\Monolog\SignLogs\Tests\Processors;
+
 use PHPUnit\Framework\TestCase;
 use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 
