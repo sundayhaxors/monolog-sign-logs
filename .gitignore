@@ -109,3 +109,4 @@ fabric.properties
 .Build/
 /.phpunit.result.cache
 /.php_cs.cache
+/.scannerwork/
