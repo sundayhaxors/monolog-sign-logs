@@ -27,6 +27,7 @@ before_script:
     - composer install
 
 script:
-    - composer phpunit
+    - composer phpcs
     - composer phpstan
+    - composer phpunit
     - sonar-scanner

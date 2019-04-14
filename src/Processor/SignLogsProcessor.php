@@ -44,7 +44,7 @@ class SignLogsProcessor implements ProcessorInterface
         }
         $supported_algorithm = \hash_algos();
         if (!in_array($algorithm, $supported_algorithm)) {
-            throw new \InvalidArgumentException('Algorithm not supported by your PHP Installation. See output of function hash_algos()');
+            throw new \InvalidArgumentException('Algorithm not supported by your PHP Installation. See hash_algos()');
         }
         $this->key = $key;
         $this->algorithm = $algorithm;

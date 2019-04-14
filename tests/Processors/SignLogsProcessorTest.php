@@ -51,7 +51,8 @@ class SignLogsProcessorTest extends TestCase
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__invoke
      */
-    public function testSigning() {
+    public function testSigning()
+    {
         $record = [
             'message' => '',
             'level' => 200,
@@ -80,5 +81,4 @@ class SignLogsProcessorTest extends TestCase
         $this->assertArrayHasKey('signature', $signedRecord['extra']);
         $this->assertMatchesSnapshot($signedRecord);
     }
-
 }
