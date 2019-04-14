@@ -24,7 +24,7 @@ class SignLogsProcessor implements ProcessorInterface
     protected $key;
     
     /**
-     * @var selected $algorithm
+     * @var string selected Algorithm
      */
     protected $algorithm;
     
