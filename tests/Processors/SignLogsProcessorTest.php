@@ -11,37 +11,37 @@ class SignLogsProcessorTest extends TestCase
 
     /**
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     * @expectedException \InvalidArgumentException
      */
     public function testThrowsExceptionOnEmptyKeyAndAlgo()
     {
+        $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('', '');
     }
 
     /**
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     * @expectedException \InvalidArgumentException
      */
     public function testThrowsExceptionOnEmptyKeyAndInvalidAlgo()
     {
+        $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('key', 'invalidAlgo');
     }
 
     /**
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     * @expectedException \InvalidArgumentException
      */
     public function testThrowsExceptionOnEmptyAlgo()
     {
+        $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('foobar', '');
     }
 
     /**
      * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     * @expectedException \InvalidArgumentException
      */
     public function testThrowsExceptionOnEmptyKeyButValidAlgo()
     {
+        $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('', 'md5');
     }
 
