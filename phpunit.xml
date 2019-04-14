@@ -17,7 +17,8 @@
     </filter>
     <logging>
         <log type="coverage-html" target=".Build/coverage" />
-        <log type="junit" target=".Build/junit/junit.xml" />
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <log type="junit" target=".Build/junit.xml" />
+        <log type="coverage-clover" target=".Build/coverage-clover.xml" />
     </logging>
 </phpunit>
