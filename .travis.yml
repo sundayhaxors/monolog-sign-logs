@@ -1,11 +1,20 @@
 language: php
-
+addons:
+    sonarcloud:
+        organization: "sundayhaxors"
+        branches:
+            - master
 php:
     - 7.2
     - 7.3
 
 notifications:
     email: false
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+        - $HOME/.sonar/cache
 
 matrix:
     fast_finish: true
@@ -20,3 +29,4 @@ before_script:
 
 script:
     - composer phpunit
+    - sonar-scanner
