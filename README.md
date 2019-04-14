@@ -1,6 +1,6 @@
 # Monolog Sign Logs
 
-[![Build Status](https://travis-ci.org/sundayhaxors/monolog-sign-logs.svg?branch=master)](https://travis-ci.org/sundayhaxors/monolog-sign-logs)
+[![Build Status](https://travis-ci.com/sundayhaxors/monolog-sign-logs.svg?branch=master)](https://travis-ci.com/sundayhaxors/monolog-sign-logs)
 
 Monolog processor that will cryptographically sign all the log messages for you.
 
