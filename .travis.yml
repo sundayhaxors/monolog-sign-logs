@@ -28,4 +28,5 @@ before_script:
 
 script:
     - composer phpunit
+    - composer phpstan
     - sonar-scanner
