@@ -27,7 +27,6 @@
     "preferred-install": {
       "*": "dist"
     },
-    "vendor-dir": ".Build/vendor",
     "platform": {
       "php": "7.2"
     }
