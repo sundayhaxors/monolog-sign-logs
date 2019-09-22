@@ -8,16 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php_version: [7.1, 7.2]
-    
+        php-binary:
+          - php7.1
+          - php7.2
+
     steps:
     - uses: actions/checkout@v1
-    - name: Use PHP ${{ matrix.php_version }}
-      uses: actions/setup-php@master
-      with:
-        version: ${{ matrix.php_version }}
-        
     - name: Check PHP Version 
-      run: php -v
+      run: ${{ matrix.php-binary }} -v
     - name: Check Composer
-      run: composer -V
+      run: ${{ matrix.php-binary }} $(which composer) -V
+    - name: PHPUnit
+      run: ${{ matrix.php-binary }} $(which composer) phpunit
