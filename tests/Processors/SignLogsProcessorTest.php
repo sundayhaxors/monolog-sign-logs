@@ -8,7 +8,6 @@ use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 
 class SignLogsProcessorTest extends TestCase
 {
-
     use \Spatie\Snapshots\MatchesSnapshots;
 
     /**

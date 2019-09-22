@@ -27,7 +27,8 @@ before_script:
     - composer install
 
 script:
-    - composer phpcs
+    - composer phpcs-fixer-test
     - composer phpstan
+    - composer psalm
     - composer phpunit
     - sonar-scanner
