@@ -21,4 +21,10 @@ jobs:
     - name: Composer install
       run: ${{ matrix.php-binary }} $(which composer) install
     - name: PHPUnit
-      run: ${{ matrix.php-binary }} $(which composer) phpunit
+      run: ${{ matrix.php-binary }} vendor/bin/phpunit
+    - name: PHPStan
+      run: ${{ matrix.php-binary }} vendor/bin/phpstan analyse --level max tests/ src/
+    - name: PHPStan
+      run: ${{ matrix.php-binary }} vendor/bin/psalm --show-info=false src/ tests/
+    - name: PHPCS-Fixer
+      run: ${{ matrix.php-binary }} vendor/bin/php-cs-fixer fix --config .php_cs.dist --dry-run
