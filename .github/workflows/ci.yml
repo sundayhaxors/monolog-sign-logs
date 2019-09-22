@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
   test:
-    name: Test on ${{ matrix.php_version }}
+    name: Test on ${{ matrix.php-binary }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         php-binary:
-          - php7.1
           - php7.2
+          - php7.3
 
     steps:
     - uses: actions/checkout@v1
