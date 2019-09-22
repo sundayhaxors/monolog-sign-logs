@@ -53,8 +53,8 @@
     }
   },
   "scripts": {
-    "phpunit": "phpunit",
-    "phpstan": "phpstan analyse --level max tests/ src/",
-    "phpcs": "phpcs --standard=PSR2 src/ tests/"
+    "phpunit": "@php ./vendor/bin/phpunit",
+    "phpstan": "@php ./vendor/bin/phpstan analyse --level max tests/ src/",
+    "phpcs": "@php ./vendor/bin/phpcs --standard=PSR2 src/ tests/"
   }
 }
