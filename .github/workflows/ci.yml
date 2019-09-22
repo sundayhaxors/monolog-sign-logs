@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Check PHP
+      run: php -V
+    - name: Check PHP 7.2
+      run: php7.2 -V
+    - name: Check Composer
+      run: composer -V
