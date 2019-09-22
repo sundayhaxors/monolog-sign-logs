@@ -3,21 +3,21 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  test:
+    name: Test on ${{ matrix.php_version }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php_version: [7.1, 7.2]
     
     steps:
     - uses: actions/checkout@v1
-    - name: Check PHP
+    - name: Use PHP ${{ matrix.php_version }}
+      uses: actions/setup-php@v1
+      with:
+        version: ${{ matrix.php_version }}
+        
+    - name: Check PHP Version 
       run: php -v
-    - name: Check PHP 7.1
-      run: php7.1 -v
-    - name: Check PHP 7.2
-      run: php7.2 -v
-    - name: Check PHP 7.3
-      run: php7.3 -v
-    - name: Check PHP 7.4
-      run: php7.4 -v
     - name: Check Composer
       run: composer -V
