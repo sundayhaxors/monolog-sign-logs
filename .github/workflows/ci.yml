@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Use PHP ${{ matrix.php_version }}
-      uses: actions/setup-php
+      uses: actions/setup-php@master
       with:
         version: ${{ matrix.php_version }}
         
