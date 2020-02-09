@@ -1,6 +1,6 @@
 # Monolog Sign Logs
 
-[![Build Status](https://img.shields.io/travis/com/sundayhaxors/monolog-sign-logs/master.svg?style=for-the-badge&logo=travis)](https://travis-ci.com/sundayhaxors/monolog-sign-logs) [![PHP Version](https://img.shields.io/packagist/php-v/sundayhaxors/monolog-sign-logs.svg?style=for-the-badge)](https://github.com/sundayhaxors/monolog-sign-logs) [![Stable Version](https://img.shields.io/packagist/v/sundayhaxors/monolog-sign-logs.svg?style=for-the-badge&label=latest)](https://packagist.org/packages/sundayhaxors/monolog-sign-logs)
+[![Build Status](https://img.shields.io/github/workflow/status/sundayhaxors/monolog-sign-logs/CI?style=for-the-badge)](https://github.com/sundayhaxors/monolog-sign-logs/actions?query=workflow%3ACI) [![PHP Version](https://img.shields.io/packagist/php-v/sundayhaxors/monolog-sign-logs.svg?style=for-the-badge)](https://github.com/sundayhaxors/monolog-sign-logs) [![Stable Version](https://img.shields.io/packagist/v/sundayhaxors/monolog-sign-logs.svg?style=for-the-badge&label=latest)](https://packagist.org/packages/sundayhaxors/monolog-sign-logs)
 
 Monolog processor that will cryptographically sign all the log messages for you.
 
