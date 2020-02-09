@@ -22,7 +22,7 @@
     }
   ],
   "type": "library",
-  "license": "lgpl",
+  "license": "LGPL-3.0-or-later",
   "config": {
     "preferred-install": {
       "*": "dist"
