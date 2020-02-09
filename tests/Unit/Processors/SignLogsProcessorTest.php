@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 namespace SundayHaxors\Monolog\SignLogs\Tests\Unit\Processors;
@@ -6,51 +7,38 @@ namespace SundayHaxors\Monolog\SignLogs\Tests\Unit\Processors;
 use PHPUnit\Framework\TestCase;
 use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 
+/**
+ * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor
+ */
 class SignLogsProcessorTest extends TestCase
 {
     use \Spatie\Snapshots\MatchesSnapshots;
 
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     */
-    public function testThrowsExceptionOnEmptyKeyAndAlgo()
+    public function testThrowsExceptionOnEmptyKeyAndAlgo(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('', '');
     }
 
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     */
-    public function testThrowsExceptionOnEmptyKeyAndInvalidAlgo()
+    public function testThrowsExceptionOnEmptyKeyAndInvalidAlgo(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('key', 'invalidAlgo');
     }
 
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     */
-    public function testThrowsExceptionOnEmptyAlgo()
+    public function testThrowsExceptionOnEmptyAlgo(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('foobar', '');
     }
 
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     */
-    public function testThrowsExceptionOnEmptyKeyButValidAlgo()
+    public function testThrowsExceptionOnEmptyKeyButValidAlgo(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         new SignLogsProcessor('', 'md5');
     }
 
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__construct
-     * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor::__invoke
-     */
-    public function testSigning()
+    public function testSigning(): void
     {
         $record = [
             'message' => '',
