@@ -64,12 +64,8 @@ class SignLogsProcessor implements ProcessorInterface
         
         $serialized_record = \serialize($cleanedRecord);
         
-        
-        print_r($cleanedRecord);
-        var_dump($serialized_record);
-        var_dump($this->key);
         $checksum = hash($this->algorithm, $this->key.':'.$serialized_record, false);
-        var_dump($checksum);
+        
         $record['extra']['signature'] = $this->algorithm.':'.$checksum;
         unset($checksum);
         unset($serialized_record);
