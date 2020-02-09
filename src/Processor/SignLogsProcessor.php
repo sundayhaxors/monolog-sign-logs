@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * Created by PhpStorm.
  * User: frank
@@ -17,17 +19,17 @@ use Monolog\Processor\ProcessorInterface;
  */
 class SignLogsProcessor implements ProcessorInterface
 {
-    
+
     /**
      * @var string Preshared Key
      */
     protected $key;
-    
+
     /**
      * @var string selected Algorithm
      */
     protected $algorithm;
-    
+
     /**
      * SignLogsProcessor constructor.
      *
@@ -49,7 +51,7 @@ class SignLogsProcessor implements ProcessorInterface
         $this->key = $key;
         $this->algorithm = $algorithm;
     }
-    
+
     /**
      * @param array $record
      * @return array
