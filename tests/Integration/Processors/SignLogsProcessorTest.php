@@ -8,12 +8,12 @@ use Monolog\Handler\TestHandler;
 use PHPUnit\Framework\TestCase;
 use SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor;
 
+/**
+ * @covers SundayHaxors\Monolog\SignLogs\Processor\SignLogsProcessor
+ */
 class SignLogsProcessorTest extends TestCase
 {
-    /**
-     * @covers SundayHaxors\Monolog\SignLogs\Tests\Processor\SignLogsProcessor
-     */
-    public function testFoo()
+    public function testSigning(): void
     {
         $log = new Logger('logger');
         $handler = new TestHandler(
