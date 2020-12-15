@@ -29,3 +29,12 @@ jobs:
       run: ${{ matrix.php-binary }} vendor/bin/psalm --show-info=false src/ tests/
     - name: PHPCS-Fixer
       run: ${{ matrix.php-binary }} vendor/bin/php-cs-fixer fix --dry-run
+    - name: Fix paths in code coverage reports
+      run: |
+        sed -i 's+/home/runner/work/monolog-sign-logs/monolog-sign-logs+/github/workspace+g' .Build/junit.xml
+        sed -i 's+/home/runner/work/monolog-sign-logs/monolog-sign-logs+/github/workspace+g' .Build/coverage-clover.xml
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
